@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-family: cursive;
+        /* margin: auto; */
+        padding: 10px;
+        text-align: center;
+      }
+
+      .locationBoard {
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        font-family: monospace;
+        margin-bottom: 20px;
+      }
+
+      .image {
+        width: 100px;
+      }
+
+      .container{
+        display: flex;
+        width: 70%;
+        margin: auto;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
+
+      .inputs{
+        border: none;
+        border-bottom: 2px solid grey;
+        padding: 2px 16px;
+        font-size: 19px;
+      }
+
+      .inputs:focus{
+        outline: none;
+      }
+
+      .locationDiv{
+        display: flex;
+      }
+
+      .skillDiv{
+        display: flex;
+      }
+
+      .fonts{
+        font-size: 22px;
+        color: rgb(69, 143, 208);
+      }
+
+      .button{
+        width: 30%;
+        margin-top: 30px;
+        padding: 14px;
+        margin: auto;
+        text-align: center;
+      }
+
+      #btn{
+        width: 180px;
+        padding: 13px 10px;
+        font-size: 19px;
+        background-color: crimson;
+        color: white;
+        border: none;
+        border-radius: 9px;
+        cursor: pointer;
+      }
+
+      .lap{
+        color: white;
+      }
+
+      .loadingContainer{
+        width: 40%;
+        margin: auto;
+        min-height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        margin-top: 30px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .anchors{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        margin: 10px auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .contentContainer{
+        width: 30%;
+        margin: auto;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .card-title:hover{
+        color:crimson;
+    }
+
+    .truck{
+      font-size: 100px;
+      margin-bottom: 30px;
+    }
+    </style>
+  </head>
+  <body>
+      <nav class="navbar">
+          <h1>Web Scripting</h1>
+    </nav>
+    <div class="populate-ui">
+        <div class="locationBoard">
+            <img
+              class="image"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7iwRCN2-bz1sixgtWfjtPY2bGiuykrd3MUQ&usqp=CAU"
+              alt=""
+            />
+            <h2>1: Enter Your Location and Skills</h2>
+        </div>
+      
+        <div class="locationBoard">
+            <img
+            class="image"
+            src="https://media.istockphoto.com/id/1175948206/vector/bar-chart-graph-for-business-design-growth-infographic-template-with-5-columns-vector.jpg?s=612x612&w=0&k=20&c=tvHZ_FU6boP7H4d3sftJJ03hOe1JbbwQAsFURulmdOI="
+            alt=""
+            />
+            <h2>2: Job Scrap does its thing</h2>
+        </div>
+      
+          <div class="locationBoard">
+              <img
+              class="image"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJFY6Zk-xEltjctljs_wYLU3ha_Z3O4zkJg&usqp=CAU"
+              alt=""
+              />
+              <h2>3: Check out our jobs</h2>
+          </div>
+      
+          <div class="container">
+            <div class="locationDiv">
+                <p class="fonts"><i class="fa-solid fa-building"></i></p>
+                <input type="text" id="location" class="inputs" placeholder="Location"/>
+            </div>
+            <div class="skillDiv">
+                <p class="fonts"><i class="fa-solid fa-laptop"></i></p>
+                <input type="text" id="skills" class="inputs" placeholder="Techonology"/>
+            </div>
+        </div>
+          <div class="button">
+            <button id="btn"><i class="fa-solid fa-laptop lap"></i> Start Scraping</button>
+          </div>
+        </div>
+        <script src="./frontend.js"></script>
+</body>
+</html>
