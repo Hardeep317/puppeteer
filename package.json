@@ -1,4 +1,23 @@
 {
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hardeep317/puppeteer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hardeep317/puppeteer/issues"
+  },
+  "homepage": "https://github.com/Hardeep317/puppeteer#readme",
   "dependencies": {
     "express": "^4.18.2",
     "puppeteer": "^19.11.1"
